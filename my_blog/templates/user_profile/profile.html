@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+ {% load staticfiles i18n %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/update.css' %}">
+  {% endblock head %}
+{% block title %}Meet Up | {{ user_profile.user.username }} {% endblock %}
+{% block content %}
+
+  <div class="update">
+        <h1>{{user_profile.user.username }}</h1>
+          {{ user_profile.bio }}
+
+  </div>
+
+
+{% endblock %}

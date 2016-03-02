@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block title %}Welcome | My Blog{% endblock %}
+{% block content %}
+
+ <header class="intro-header" style="background-image: url('{{ article.image }}')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Meet Up</h1>
+                        <hr class="small">
+                        <span class="subheading">{{ article.title }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+                    <a href="post.html">
+                        <h2 class="post-title">
+                            Django web development
+
+                        </h2>
+                        <h3 class="post-subtitle">
+                            {{ article.title }}
+                        </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="#">{{ article.author }}</a> on  {{ article.date_added }}</p>
+                </div>
+                <hr>
+                <div class="post-preview">
+                    <a href="post.html">
+                        <h2 class="post-title">
+                            <strong>ritupycon</strong>
+                        </h2>
+                    </a>
+                    <p class="post-meta">Posted by <a href="#">{{article.author }}</a> on {{ article.date_added }}</p>
+                </div>
+                <hr>
+                <div class="post-preview">
+                    <a href="post.html">
+                        <h2 class="post-title">
+                            <a href=""><span class="glyphicon glyphicon-thumbs-up"></span>Friend Book</a>
+                        </h2>
+                        <h3 class="post-subtitle">
+                            <span style="color:green">facebook</span>
+                        </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="#">{{ article.author }}</a> on  {{ article.date_added }}</p>
+                </div>
+                <hr>
+                <div class="post-preview">
+                    <a href="post.html">
+                        <h2 class="post-title">
+                            pyconindia
+                        </h2>
+                        <h3 class="post-subtitle">
+                            Djangocon
+                        </h3>
+                    </a>
+                    <p class="post-meta">Posted by <a href="#">{{ article.author }}</a> on  {{ article.date_added }}</p>
+                </div>
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    <li class="next">
+                        <a href="#">Previous Post &rarr;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+.cover{
+   margin:0 auto;
+   width:400px;
+   top:70px;
+   height:500px;
+   position:relative;
+}
+
+.main_cover{
+  padding:0px;
+  margin:0;
+
+  color:black;
+   height:700px;
+
+}

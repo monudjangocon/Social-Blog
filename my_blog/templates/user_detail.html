@@ -1,0 +1,18 @@
+{% load staticfiles i18n  %}
+{% block title %}Login{% endblock %}
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/login_box.css' %}">
+{% endblock head %}
+
+{% block content %}
+<div class="cover">
+    <h2>{{ object.username }}'s Profile</h2>
+{% if object.userprofile.bio %}
+<div>
+<b>Bio:</b>
+{{ object.userprofile.bio }}
+</div>
+{% endif %}
+
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/update.css' %}">
+  {% endblock head %}
+{% block content %}
+   <div class="update">
+       <h1 style="color:green">Registered Members</h1>
+       {% for user in users %}
+
+       <p>
+          <a href="/user/profile/{{ user.pk }}/">{{ user.user }}</a></p>
+       {% endfor %}
+   </div>
+{% endblock %}

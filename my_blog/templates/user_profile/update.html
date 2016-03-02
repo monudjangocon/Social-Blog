@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+ {% load staticfiles i18n %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/update.css' %}">
+  {% endblock head %}
+{% block title %}Meet Up | update_profile {% endblock %}
+{% block content %}
+
+  <div class="update">
+        <h1>{{user}}</h1>
+      <form action="/user/your_profile/" method="post">{% csrf_token %}
+           <label>Profile:--</label><br/>
+    {{ form.bio }}
+      <button type="submit"  class="btn btn-success">Submit</button>
+      </form>
+
+  </div>
+
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+    {% block content %}
+    <header class="intro-header" style="background-image: url('/static/img/cover.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>Django web development</h1>
+                        <h2 class="subheading">ritupycon</h2>
+                        <span class="meta">Posted by <a href="#">{{ article.author }}</a> on {{ article.date_added }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+   {% endblock %}

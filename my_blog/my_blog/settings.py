@@ -24,13 +24,10 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = ['ritupycon.com']
 EMAIL_USE_TLS=True
 EMAIL_HOST='smtp.gmail.com'
-EMAIL_HOST_USER='ritupycon'
+EMAIL_HOST_USER='ritu31195@gmail.com'
 EMAIL_HOST_PASSWORD=''
-SERVER_EMAIL='ritu31195@gmail.com'
-DEFAULT_EMAIL_FROM='ritudjango'
 
 # Application definition
 

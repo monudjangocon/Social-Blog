@@ -11,6 +11,8 @@ from django.contrib.auth.decorators import login_required
 from django.template import RequestContext
 from forms import UserProfileForm
 from django.http import HttpResponseRedirect
+from django.core.mail import send_mail
+from django.conf import settings
 
 
 def blog_request(request,blog_id):
@@ -46,6 +48,12 @@ def signup(request):
             User.objects.create_user(username=username, password=password, email=email)
             user = authenticate(username=username, password=password)
             login(request, user)
+            subject="registration"
+            message="%s %s" % (username,email)
+            emailFrom=email
+            emailTo=[settings.EMAIL_HOST_USER]
+
+            send_mail(subject, message, emailFrom,emailTo, fail_silently=False)
             return redirect('/login/')
     else:
         return render(request, 'signup.html', {'form': SignUpForm()})
